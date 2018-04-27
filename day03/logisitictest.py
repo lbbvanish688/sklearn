@@ -9,3 +9,4 @@ y=(iris["target"]==2).astype(np.int)
 from sklearn.linear_model import LogisticRegression
 log_reg=LogisticRegression()
 log_reg.fit(X,y)
+
