@@ -46,3 +46,9 @@ max_samples=100, bootstrap=True, n_jobs=-1
 bag_clf.fit(X_train, y_train)
 y_pred = bag_clf.predict(X_test)
 print(bag_clf.__class__.__name__, accuracy_score(y_test, y_pred))
+
+"""
+除了能随机选样本创建多个子分类器以外还能够随机选择特征来创建多个子分类器，通过参数max_features和bootstrap_features实现，其含义与max_samples和bootstrap类似。对特征进行采样能够提升模型的多样性，增加偏差，减少方差。
+
+  当处理高维(多特征)数据（例如图像）时，这种方法比较有用。同时对训练数据和特征进行抽样称为Random Patches，只针对特征抽样而不针对训练数据抽样是Random Subspaces。 
+"""
