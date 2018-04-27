@@ -36,3 +36,4 @@ from sklearn.linear_model import SGDRegressor
 sgd_reg = SGDRegressor(n_iter=50, penalty=None, eta0=0.1)
 sgd_reg.fit(X, y.ravel())
 sgd_reg.intercept_, sgd_reg.coef_
+
